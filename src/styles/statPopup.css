@@ -1,28 +1,28 @@
 /* StatPopup CSS */
 @font-face {
     font-family: 'ProximaNova-Bold';
-    src: url('../assets/fonts/Fontspring-DEMO-proximanova-bold.otf') format('opentype');
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanova-bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ProximaNova-Black';
-    src: url('../assets/fonts/Fontspring-DEMO-proximanova-black.otf') format('opentype');
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanova-black.otf') format('opentype');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ProximaNovaCond-Regular';
-    src: url('../assets/fonts/Fontspring-DEMO-proximanovacond-regular.otf') format('opentype');
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanovacond-regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ProximaNovaCond-Bold';
-    src: url('../assets/fonts/Fontspring-DEMO-proximanovacond-bold.otf') format('opentype');
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanovacond-bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
@@ -49,6 +49,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     background-color: var(--popup-bg);
     color: var(--popup-text);
     font-family: 'ProximaNovaCond-Regular', 'Arial', sans-serif;

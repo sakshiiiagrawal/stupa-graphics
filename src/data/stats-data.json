@@ -18,8 +18,7 @@
         "score": 2,
         "totalScore": 8
       }
-    ],
-    "organizationLogo": "src/assets/ettu_logo.png"
+    ]
   },
   "backhandShot": {
     "title": "BACKHAND SHOT WINS",
@@ -40,14 +39,13 @@
         "score": 0,
         "totalScore": 6
       }
-    ],
-    "organizationLogo": "src/assets/ettu_logo.png"
+    ]
   },
   "matchSummary": {
     "year": "2025",
     "tournamentName": "CCB Europe Top 16 Cup",
-    "leftLogo": "src/assets/stupa_logo.png",
-    "rightLogo": "src/assets/ettu_logo.png",
+    "leftLogo": "src/assets/logos/stupa-logo-dark.png",
+    "rightLogo": "src/assets/logos/ettu-logo.png",
     "title": "GAME 3 SUMMARY",
     "player1": {
       "name": "MOREGARD TRULS",
@@ -89,8 +87,8 @@
   "matchRallies": {
     "year": "2025",
     "tournamentName": "CCB Europe Top 16 Cup",
-    "leftLogo": "src/assets/stupa_logo.png",
-    "rightLogo": "src/assets/ettu_logo.png",
+    "leftLogo": "src/assets/logos/stupa-logo-dark.png",
+    "rightLogo": "src/assets/logos/ettu-logo.png",
     "title": "MATCH RALLIES",
     "player1": {
       "name": "SHAO JIENI",

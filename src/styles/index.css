@@ -5,6 +5,35 @@
 @import './matchSummaryPopup.css';
 @import './matchRalliesPopup.css';
 
+/* Font definitions */
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanova-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Black';
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanova-black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaCond-Regular';
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanovacond-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaCond-Bold';
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanovacond-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 /* Common styles */
 :root {
   /* Define any global variables here */

@@ -1,28 +1,28 @@
 /* Match Summary Popup CSS */
 @font-face {
     font-family: 'ProximaNova-Bold';
-    src: url('../assets/fonts/Fontspring-DEMO-proximanova-bold.otf') format('opentype');
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanova-bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ProximaNova-Black';
-    src: url('../assets/fonts/Fontspring-DEMO-proximanova-black.otf') format('opentype');
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanova-black.otf') format('opentype');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ProximaNovaCond-Regular';
-    src: url('../assets/fonts/Fontspring-DEMO-proximanovacond-regular.otf') format('opentype');
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanovacond-regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'ProximaNovaCond-Bold';
-    src: url('../assets/fonts/Fontspring-DEMO-proximanovacond-bold.otf') format('opentype');
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanovacond-bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
@@ -48,6 +48,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     font-family: 'ProximaNovaCond-Regular', 'Arial', sans-serif;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -59,7 +61,7 @@
     display: flex;
     height: 80px;
     background-color: var(--match-summary-header-bg);
-    background-image: url('../assets/background/trajectory.svg');
+    background-image: url('src/assets/background/trajectory.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -213,4 +215,38 @@
     font-size: 16px;
     font-family: 'ProximaNovaCond-Regular', 'Arial', sans-serif;
     letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .match-summary-popup__year {
+        font-size: 24px;
+    }
+    
+    .match-summary-popup__tournament-name {
+        font-size: 16px;
+    }
+    
+    .match-summary-popup__title {
+        font-size: 24px;
+    }
+    
+    .match-summary-popup__score {
+        width: 50px;
+        font-size: 24px;
+    }
+    
+    .match-summary-popup__player-name {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    
+    .match-summary-popup__stat-value {
+        width: 70px;
+        font-size: 20px;
+    }
+    
+    .match-summary-popup__stat-label {
+        font-size: 14px;
+    }
 } 

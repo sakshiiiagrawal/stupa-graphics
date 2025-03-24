@@ -18,8 +18,7 @@
         "score": 3,
         "totalScore": 8
       }
-    ],
-    "organizationLogo": "src/assets/ettu_logo.png"
+    ]
   },
   "backhandShot": {
     "title": "DYNAMIC BACKHAND DATA",
@@ -40,8 +39,7 @@
         "score": 1,
         "totalScore": 7
       }
-    ],
-    "organizationLogo": "src/assets/ettu_logo.png"
+    ]
   },
   "matchSummary": {
     "year": "2025",

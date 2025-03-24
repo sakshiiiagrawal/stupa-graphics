@@ -121,3 +121,7 @@ function greet(name = "Guest") {
 }
 
 console.log(greet());
+
+leftImg.src = 'src/assets/logos/stupa-logo-dark.png';
+
+img.src = `src/assets/flags/${player.country.toLowerCase()}.png`;

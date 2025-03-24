@@ -66,7 +66,7 @@ class MatchSummaryPopup {
         const leftLogo = document.createElement('div');
         leftLogo.className = 'match-summary-popup__logo match-summary-popup__logo--left';
         const leftImg = document.createElement('img');
-        leftImg.src = '../assets/logos/stupa-logo-dark.png';
+        leftImg.src = 'src/assets/logos/stupa-logo-dark.png';
         leftImg.alt = 'Stupa Logo';
         leftLogo.appendChild(leftImg);
         header.appendChild(leftLogo);
@@ -91,7 +91,7 @@ class MatchSummaryPopup {
         const rightLogo = document.createElement('div');
         rightLogo.className = 'match-summary-popup__logo match-summary-popup__logo--right';
         const rightImg = document.createElement('img');
-        rightImg.src = '../assets/logos/ettu-logo.png';
+        rightImg.src = 'src/assets/logos/ettu-logo.png';
         rightImg.alt = 'ETTU Logo';
         rightLogo.appendChild(rightImg);
         header.appendChild(rightLogo);

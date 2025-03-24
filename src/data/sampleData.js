@@ -8,7 +8,7 @@ const sampleData = {
                 percentage: 75,
                 score: '3',
                 totalScore: '11',
-                country: 'pt',
+                country: 'Portugal',
                 isActive: true
             },
             {
@@ -16,7 +16,7 @@ const sampleData = {
                 percentage: 45,
                 score: '1',
                 totalScore: '7',
-                country: 'fr',
+                country: 'France',
                 isActive: false
             }
         ]
@@ -29,7 +29,7 @@ const sampleData = {
                 percentage: 65,
                 score: '3',
                 totalScore: '11',
-                country: 'pt',
+                country: 'Portugal',
                 isActive: false
             },
             {
@@ -37,7 +37,7 @@ const sampleData = {
                 percentage: 48,
                 score: '1',
                 totalScore: '7',
-                country: 'fr',
+                country: 'France',
                 isActive: true
             }
         ]
@@ -50,7 +50,7 @@ const sampleData = {
                 percentage: 71,
                 score: '3',
                 totalScore: '11',
-                country: 'pt',
+                country: 'Portugal',
                 isActive: true
             },
             {
@@ -58,7 +58,7 @@ const sampleData = {
                 percentage: 29,
                 score: '1',
                 totalScore: '7',
-                country: 'fr',
+                country: 'France',
                 isActive: false
             }
         ]
@@ -105,12 +105,12 @@ const sampleData = {
         title: 'GAME RALLIES',
         player1: {
             name: 'SHAO JIENI',
-            countryCode: 'pt', // Portugal
+            countryCode: 'Portugal', // Portugal
             color: '#80C4E6'
         },
         player2: {
             name: 'YUAN JIA NAN',
-            countryCode: 'fr', // France
+            countryCode: 'France', // France
             color: '#2F74A4'
         },
         rallyStats: [

@@ -70,7 +70,7 @@ class MatchRalliesPopup {
         const leftLogo = document.createElement('div');
         leftLogo.className = 'match-rallies-popup__logo match-rallies-popup__logo--left';
         const leftImg = document.createElement('img');
-        leftImg.src = '../assets/logos/stupa-logo-dark.png';
+        leftImg.src = 'src/assets/logos/stupa-logo-dark.png';
         leftImg.alt = 'Stupa Logo';
         leftLogo.appendChild(leftImg);
         header.appendChild(leftLogo);
@@ -95,7 +95,7 @@ class MatchRalliesPopup {
         const rightLogo = document.createElement('div');
         rightLogo.className = 'match-rallies-popup__logo match-rallies-popup__logo--right';
         const rightImg = document.createElement('img');
-        rightImg.src = '../assets/logos/ettu-logo.png';
+        rightImg.src = 'src/assets/logos/ettu-logo.png';
         rightImg.alt = 'ETTU Logo';
         rightLogo.appendChild(rightImg);
         header.appendChild(rightLogo);
@@ -146,7 +146,9 @@ class MatchRalliesPopup {
             player1Flag.className = 'match-rallies-popup__player-flag';
             
             const flagImg = document.createElement('img');
-            flagImg.src = `../assets/flags/${this.data.player1.countryCode.toLowerCase()}.png`;
+            // Extract first 3 characters from country code and convert to uppercase
+            const countryCode = this.data.player1.countryCode.substring(0, 3).toUpperCase();
+            flagImg.src = `src/assets/flags/${countryCode}.png`;
             flagImg.alt = `${this.data.player1.countryCode} flag`;
             player1Flag.appendChild(flagImg);
             
@@ -164,7 +166,9 @@ class MatchRalliesPopup {
             player2Flag.className = 'match-rallies-popup__player-flag';
             
             const flagImg = document.createElement('img');
-            flagImg.src = `../assets/flags/${this.data.player2.countryCode.toLowerCase()}.png`;
+            // Extract first 3 characters from country code and convert to uppercase
+            const countryCode = this.data.player2.countryCode.substring(0, 3).toUpperCase();
+            flagImg.src = `src/assets/flags/${countryCode}.png`;
             flagImg.alt = `${this.data.player2.countryCode} flag`;
             player2Flag.appendChild(flagImg);
             

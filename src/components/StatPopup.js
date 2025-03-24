@@ -170,8 +170,9 @@ class StatPopup {
             flag.className = 'player-match__flag';
             
             const img = document.createElement('img');
-            // Use flag from assets/flags directory
-            img.src = `../assets/flags/${player.country.toLowerCase()}.png`;
+            // Extract first 3 characters and convert to uppercase for flag
+            const countryCode = player.country.substring(0, 3).toUpperCase();
+            img.src = `src/assets/flags/${countryCode}.png`;
             img.alt = player.country;
             flag.appendChild(img);
             
