@@ -1,0 +1,46 @@
+{
+  "serveSuccess": {
+    "title": "DYNAMIC SERVE DATA",
+    "players": [
+      {
+        "name": "GROTH JONATHAN",
+        "percentage": 88,
+        "isActive": false,
+        "countryCode": "dk",
+        "score": 3,
+        "totalScore": 8
+      },
+      {
+        "name": "JORGIC DARKO",
+        "percentage": 92,
+        "isActive": true,
+        "countryCode": "si",
+        "score": 5,
+        "totalScore": 8
+      }
+    ],
+    "organizationLogo": "src/assets/ettu_logo.png"
+  },
+  "backhandShot": {
+    "title": "DYNAMIC BACKHAND DATA",
+    "players": [
+      {
+        "name": "BAJOR NATALIA",
+        "percentage": 95,
+        "isActive": true,
+        "countryCode": "pl",
+        "score": 3,
+        "totalScore": 6
+      },
+      {
+        "name": "WINTER",
+        "percentage": 70,
+        "isActive": false,
+        "countryCode": "de",
+        "score": 2,
+        "totalScore": 6
+      }
+    ],
+    "organizationLogo": "src/assets/ettu_logo.png"
+  }
+} 

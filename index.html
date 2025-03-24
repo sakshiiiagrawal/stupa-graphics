@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Stats Popup Library</title>
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/popups.css">
+    <style>
+        .controls {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .control-group {
+            margin-bottom: 15px;
+        }
+        
+        .control-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .control-group select, .control-group button {
+            padding: 8px 12px;
+            margin-right: 10px;
+        }
+        
+        .buttons button {
+            background-color: #1A6E9C;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .buttons button:hover {
+            background-color: #165d84;
+        }
+        
+        .keyboard-shortcuts {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .json-controls {
+            margin-top: 15px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sports Stats Popup Library</h1>
+        
+        <div class="controls">
+            <h3>Control Panel</h3>
+            <div class="control-group">
+                <label for="layout-select">Layout:</label>
+                <select id="layout-select">
+                    <option value="default">Default</option>
+                    <option value="compact">Compact</option>
+                    <option value="expanded">Expanded</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label>Toggle Features:</label>
+                <label><input type="checkbox" id="show-title" checked> Show Title</label>
+                <label><input type="checkbox" id="show-percentage" checked> Show Percentage</label>
+                <label><input type="checkbox" id="show-progress" checked> Show Progress Bar</label>
+                <label><input type="checkbox" id="show-logo" checked> Show Logo</label>
+                <label><input type="checkbox" id="show-flags" checked> Show Flags</label>
+                <label><input type="checkbox" id="show-indicator" checked> Show Turn Indicator</label>
+            </div>
+            
+            <div class="control-group buttons">
+                <button id="update-config">Apply Settings</button>
+                <button id="update-data">Update Data</button>
+                <button id="reset">Reset</button>
+            </div>
+            
+            <div class="json-controls">
+                <label>Load External Data:</label>
+                <div class="buttons">
+                    <button id="load-stats-json">Load Stats Data</button>
+                    <button id="load-dynamic-json">Load Dynamic Data</button>
+                </div>
+            </div>
+            
+            <div class="keyboard-shortcuts">
+                <p>Keyboard Shortcuts: <strong>U</strong> - Update Data, <strong>C</strong> - Compact, <strong>E</strong> - Expanded, <strong>D</strong> - Default, <strong>R</strong> - Reset, <strong>S</strong> - Load Stats Data, <strong>F</strong> - Load Dynamic Data</p>
+            </div>
+        </div>
+        
+        <!-- Demo containers -->
+        <div class="demo-container">
+            <h2>Demo 1: Serve Success</h2>
+            <div id="serve-success-popup" class="popup-container"></div>
+        </div>
+        
+        <div class="demo-container">
+            <h2>Demo 2: Backhand Shot Wins</h2>
+            <div id="backhand-shot-popup" class="popup-container"></div>
+        </div>
+    </div>
+
+    <!-- Data -->
+    <script src="src/data/sampleData.js"></script>
+    
+    <!-- Components -->
+    <script src="src/components/StatPopup.js"></script>
+    
+    <!-- Main JS -->
+    <script src="src/js/main.js"></script>
+</body>
+</html> 

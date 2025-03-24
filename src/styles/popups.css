@@ -1,0 +1,248 @@
+/* Popup Components CSS */
+:root {
+    /* Colors extracted from the images */
+    --title-bg: #000000;
+    --title-text: #FFFFFF;
+    --popup-bg: #2F74A4;
+    --popup-text: #FFFFFF;
+    --progress-bar-bg: #3888BD;
+    --progress-bar-fill: #FFFFFF;
+    --match-footer-bg: #2F74A4;
+    --match-footer-text: #FFFFFF;
+    --score-bg: #000000;
+    --score-text: #FFFFFF;
+    --total-score-bg: #FFFFFF;
+    --total-score-text: #2F74A4;
+    --active-player-indicator: #FFFFFF;
+}
+
+/* Stats Popup */
+.stats-popup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--popup-bg);
+    color: var(--popup-text);
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    overflow: hidden;
+}
+
+/* Layout Variations */
+.stats-popup--compact .stats-popup__content {
+    padding: 10px;
+}
+
+.stats-popup--compact .player-stat {
+    margin-bottom: 8px;
+}
+
+.stats-popup--compact .player-stat__progress-container {
+    height: 15px;
+}
+
+.stats-popup--expanded .stats-popup__content {
+    padding: 20px;
+}
+
+.stats-popup--expanded .player-stat {
+    margin-bottom: 20px;
+}
+
+.stats-popup--expanded .player-stat__progress-container {
+    height: 25px;
+}
+
+.stats-popup--expanded .player-stat__percentage {
+    font-size: 18px;
+}
+
+/* Popup Title */
+.stats-popup__title {
+    background-color: var(--title-bg);
+    color: var(--title-text);
+    padding: 12px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Player Stats Section */
+.stats-popup__content {
+    padding: 15px;
+}
+
+.player-stat {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.player-stat__indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid var(--popup-text);
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.player-stat__indicator.active {
+    background-color: var(--active-player-indicator);
+}
+
+.player-stat__name {
+    flex: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 15px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.player-stat__progress-container {
+    flex: 3;
+    height: 16px;
+    background-color: var(--progress-bar-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.player-stat__progress-bar {
+    height: 100%;
+    background-color: var(--progress-bar-fill);
+    border-radius: 8px;
+    opacity: 0.8;
+}
+
+.player-stat__percentage {
+    width: 60px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Match Footer */
+.match-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px; /* Add small gap between content and footer */
+}
+
+.player-match {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: var(--match-footer-bg);
+}
+
+.player-match__logo {
+    width: 40px;
+    height: 40px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.player-match__flag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 20px;
+    margin: 0 10px;
+    overflow: hidden;
+    background-color: var(--match-footer-bg);
+}
+
+.player-match__flag img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.player-match__name {
+    flex: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--match-footer-text);
+    letter-spacing: 0.5px;
+}
+
+.player-match__turn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--active-player-indicator);
+    margin-right: 10px;
+    flex-shrink: 0;
+    border: none;
+}
+
+.player-match__score {
+    width: 40px;
+    height: 40px;
+    background-color: var(--score-bg);
+    color: var(--score-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.player-match__total {
+    width: 40px;
+    height: 40px;
+    background-color: var(--total-score-bg);
+    color: var(--total-score-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .player-stat {
+        flex-wrap: wrap;
+    }
+    
+    .player-stat__name {
+        width: calc(100% - 25px);
+        margin-bottom: 5px;
+    }
+    
+    .player-stat__progress-container {
+        width: calc(100% - 60px);
+    }
+}
+
+/* Print styles */
+@media print {
+    .stats-popup {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .stats-popup__title {
+        background-color: #333;
+    }
+} 
