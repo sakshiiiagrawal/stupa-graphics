@@ -7,19 +7,20 @@ A flexible and scalable web component library for creating dynamic, data-driven 
 - **Customizable Popups**
   - Dynamic title updates
   - Customizable progress bar graphs with percentage display
-  - Match logo display
+  - Match logo display with Stupa and ETTU logos
   - Player information including flags, names, scores
   - Turn indicator to show active player
 
 - **Multiple Popup Types**
-  - **Stat Popup**: For displaying player-specific statistics with progress bars
-  - **Match Summary Popup**: For showing match score, player names, and comparative statistics
-  - **Match Rallies Popup**: For visualizing rally statistics with side-by-side progress bars
+  - **StatPopup**: For displaying player-specific statistics with progress bars
+  - **MatchSummaryPopup**: For showing game score, player names, and comparative statistics
+  - **MatchRalliesPopup**: For visualizing rally statistics with side-by-side progress bars
 
 - **Flexible Styling**
-  - Exact color matching from design
+  - Exact color matching from design specifications
   - CSS variables for easy customization
-  - Responsive design
+  - Responsive design for various screen sizes
+  - Component-specific CSS files for better organization
 
 - **Dynamic Data Handling**
   - Simple JSON/JavaScript object data structure
@@ -33,19 +34,24 @@ A flexible and scalable web component library for creating dynamic, data-driven 
 ├── index.html           # Demo page
 ├── src/
 │   ├── assets/          # Images, logos, and flags
+│   │   ├── background/  # Background images for popups
 │   │   ├── flags/       # Country flags
-│   │   └── ettu_logo.svg
+│   │   ├── fonts/       # Font files
+│   │   └── logos/       # Organization logos
 │   ├── components/      # Reusable components
 │   │   ├── StatPopup.js         # Basic stats popup component
-│   │   ├── MatchSummaryPopup.js # Match summary component
-│   │   └── MatchRalliesPopup.js # Match rallies component
+│   │   ├── MatchSummaryPopup.js # Game summary component
+│   │   └── MatchRalliesPopup.js # Game rallies component
 │   ├── data/            # Data structures
 │   │   ├── sampleData.js       # Sample data for all components
 │   │   ├── stats-data.json     # External JSON data example
 │   │   └── dynamic-data.json   # Dynamic JSON data example
+│   ├── designs/         # Design reference files (PNG)
 │   ├── styles/          # CSS styles
-│   │   ├── main.css     # General styles
-│   │   └── popups.css   # Popup-specific styles
+│   │   ├── index.css           # Main CSS file importing all component styles
+│   │   ├── statPopup.css       # StatPopup specific styles
+│   │   ├── matchSummaryPopup.css # MatchSummaryPopup specific styles
+│   │   └── matchRalliesPopup.css # MatchRalliesPopup specific styles
 │   └── js/              # JavaScript files
 │       └── main.js      # Main initialization
 ```
@@ -55,8 +61,7 @@ A flexible and scalable web component library for creating dynamic, data-driven 
 1. Include the required CSS and JavaScript files:
 
 ```html
-<link rel="stylesheet" href="src/styles/main.css">
-<link rel="stylesheet" href="src/styles/popups.css">
+<link rel="stylesheet" href="src/styles/index.css">
 <script src="src/components/StatPopup.js"></script>
 <script src="src/components/MatchSummaryPopup.js"></script>
 <script src="src/components/MatchRalliesPopup.js"></script>
@@ -72,32 +77,36 @@ A flexible and scalable web component library for creating dynamic, data-driven 
 
 ```javascript
 // For a basic stats popup
-const myData = {
+const statData = {
     title: 'SERVE SUCCESS',
     players: [
         {
             name: 'PLAYER ONE',
             percentage: 75,
-            isActive: true,
-            countryCode: 'US',
-            score: 2,
-            totalScore: 10
+            score: '3',
+            totalScore: '11',
+            country: 'fr',
+            isActive: true
         },
-        // More players...
-    ],
-    organizationLogo: 'path/to/logo.png'
+        {
+            name: 'PLAYER TWO',
+            percentage: 45,
+            score: '1',
+            totalScore: '7',
+            country: 'de',
+            isActive: false
+        }
+    ]
 };
 
 // For a match summary popup
 const matchSummaryData = {
     year: '2025',
     tournamentName: 'Tournament Name',
-    leftLogo: 'path/to/logo1.png',
-    rightLogo: 'path/to/logo2.png',
-    title: 'MATCH SUMMARY',
+    title: 'GAME SUMMARY',
     player1: {
         name: 'PLAYER ONE',
-        gameScore: '2'
+        gameScore: '3'
     },
     player2: {
         name: 'PLAYER TWO',
@@ -105,96 +114,56 @@ const matchSummaryData = {
     },
     stats: [
         {
-            label: 'TOTAL POINTS WON',
-            player1Value: '12',
-            player2Value: '10'
+            label: 'SERVE POINTS WON',
+            player1Value: '25',
+            player2Value: '13'
         },
-        // More stats...
+        {
+            label: 'RETURN POINTS WON',
+            player1Value: '22',
+            player2Value: '15'
+        }
     ],
-    footerText: 'STATS BY: ORGANIZATION NAME'
+    footerText: 'STATS BY: STUPA SPORTS ANALYTICS'
 };
 ```
 
-4. Initialize the popup:
+4. Initialize the component:
 
 ```javascript
-// Basic stat popup
-const myPopup = new StatPopup('my-popup', myData);
+// Create a stats popup
+const myStatPopup = new StatPopup('my-popup', statData, {
+    // Optional configuration
+    layout: 'default', // 'default', 'compact', or 'expanded'
+    showTitle: true,
+    showPercentage: true,
+    showProgressBar: true,
+    showLogo: true,
+    showPlayerFlags: true,
+    showTurnIndicator: true
+});
 
-// Match summary popup
-const matchSummary = new MatchSummaryPopup('match-summary-container', matchSummaryData);
-
-// Match rallies popup
-const matchRallies = new MatchRalliesPopup('match-rallies-container', matchRalliesData);
-```
-
-5. To update with new data:
-
-```javascript
-myPopup.update(newData);
-matchSummary.update(newMatchData);
-```
-
-## Customization
-
-You can customize the appearance by modifying the CSS variables in `src/styles/popups.css`:
-
-```css
-:root {
-    --title-bg: #000000;
-    --title-text: #FFFFFF;
-    --popup-bg: #1A6E9C;
-    /* More variables... */
-}
-```
-
-### Configuration Options
-
-The StatPopup component supports various configuration options:
-
-```javascript
-// Default configuration
-const config = {
-    showTitle: true,       // Whether to show the title
-    showPercentage: true,  // Whether to show percentages
-    showProgressBar: true, // Whether to show progress bars
-    showLogo: true,        // Whether to show organization logo
-    showPlayerFlags: true, // Whether to show player flags
-    showTurnIndicator: true, // Whether to show active player indicator
-    layout: 'default'      // Layout style: 'default', 'compact', or 'expanded'
-};
-
-// Initialize with configuration
-const myPopup = new StatPopup('my-popup', myData, config);
-
-// Update with new configuration
-myPopup.update(myData, {
-    layout: 'compact',
-    showLogo: false
+// Or create a match summary popup
+const myMatchSummary = new MatchSummaryPopup('my-popup', matchSummaryData, {
+    showHeader: true,
+    showFooter: true
 });
 ```
 
-The MatchSummaryPopup and MatchRalliesPopup components also support configuration options:
+5. Update the component with new data:
 
 ```javascript
-// Match Summary configuration
-const matchSummaryConfig = {
-    showHeader: true,  // Whether to show the tournament header
-    showFooter: true   // Whether to show the footer
-};
-
-// Initialize with configuration
-const matchSummary = new MatchSummaryPopup('match-summary-container', matchSummaryData, matchSummaryConfig);
+myStatPopup.update(newData, newConfig);
 ```
 
-### Responsive Design
+## Development
 
-The components are responsive by default and will adapt to different screen sizes. On small screens, the layout will adjust to maintain usability.
+To make changes to the components:
 
-## Browser Support
-
-This component library works in all modern browsers that support ES6+ and modern CSS features.
+1. Edit the component JavaScript files in `src/components/`
+2. Edit the component-specific CSS files in `src/styles/`
+3. Test your changes using the demo page (`index.html`)
 
 ## License
 
-MIT 
+This project is licensed under the MIT License. 

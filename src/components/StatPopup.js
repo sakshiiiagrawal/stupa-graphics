@@ -153,63 +153,35 @@ class StatPopup {
         const playerMatch = document.createElement('div');
         playerMatch.className = 'player-match';
         
-        // Create logo if enabled
-        if (this.config.showLogo && this.data.organizationLogo) {
-            const logo = document.createElement('div');
-            logo.className = 'player-match__logo';
-            
-            // Handle the organization logo
-            try {
-                const logoImg = document.createElement('img');
-                logoImg.src = this.data.organizationLogo;
-                logoImg.alt = 'Organization Logo';
-                logoImg.height = 30;
-                logoImg.onerror = function() {
-                    this.onerror = null;
-                    this.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><rect width="30" height="30" fill="white"/><text x="50%" y="50%" font-family="Arial" font-size="8" fill="black" text-anchor="middle" dominant-baseline="middle">LOGO</text></svg>';
-                };
-                logo.appendChild(logoImg);
-            } catch (e) {
-                // Fallback for logo
-                logo.textContent = 'LOGO';
-            }
-            
-            playerMatch.appendChild(logo);
+        // Create player avatar
+        const avatar = document.createElement('div');
+        avatar.className = 'player-match__avatar';
+        if (player.avatar) {
+            const img = document.createElement('img');
+            img.src = player.avatar;
+            img.alt = player.name;
+            avatar.appendChild(img);
         }
+        playerMatch.appendChild(avatar);
         
-        // Create flag if enabled
-        if (this.config.showPlayerFlags && player.countryCode) {
+        // Create player flag if enabled
+        if (this.config.showPlayerFlags && player.country) {
             const flag = document.createElement('div');
             flag.className = 'player-match__flag';
             
-            // Create actual image element with fallback
-            try {
-                const flagImg = document.createElement('img');
-                flagImg.src = `src/assets/flags/${player.countryCode.toLowerCase()}.png`;
-                flagImg.alt = `${player.countryCode} flag`;
-                flagImg.height = 20;
-                flagImg.onerror = function() {
-                    this.onerror = null;
-                    // Create a text-based flag fallback
-                    this.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20"><rect width="30" height="20" fill="%231A6E9C"/><text x="50%" y="50%" font-family="Arial" font-size="10" fill="white" text-anchor="middle" dominant-baseline="middle">${player.countryCode.toUpperCase()}</text></svg>`;
-                };
-                flag.appendChild(flagImg);
-            } catch (e) {
-                // Text fallback
-                const fallbackText = document.createElement('span');
-                fallbackText.textContent = player.countryCode.toUpperCase();
-                flag.appendChild(fallbackText);
-            }
+            const img = document.createElement('img');
+            // Use flag from assets/flags directory
+            img.src = `../assets/flags/${player.country.toLowerCase()}.png`;
+            img.alt = player.country;
+            flag.appendChild(img);
             
             playerMatch.appendChild(flag);
         }
         
-        // Create name
+        // Create player name
         const name = document.createElement('div');
         name.className = 'player-match__name';
-        // Use the first part of the name or the full name if no space is found
-        const displayName = player.name.includes(' ') ? player.name.split(' ')[0] : player.name;
-        name.textContent = displayName;
+        name.textContent = player.name;
         playerMatch.appendChild(name);
         
         // Create turn indicator if player is active and indicator is enabled

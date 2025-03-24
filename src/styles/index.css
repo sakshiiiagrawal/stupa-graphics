@@ -1,0 +1,49 @@
+/* Main CSS file to import all component-specific CSS */
+
+/* Import component-specific CSS files */
+@import './statPopup.css';
+@import './matchSummaryPopup.css';
+@import './matchRalliesPopup.css';
+
+/* Common styles */
+:root {
+  /* Define any global variables here */
+  --primary-color: #3582B2;
+  --secondary-color: #2F74A4;
+  --text-color: #FFFFFF;
+  --background-color: #19222D;
+  --border-color: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'ProximaNovaCond-Regular', 'Arial', sans-serif;
+  line-height: 1.5;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Mobile-specific adjustments */
+}
+
+/* Print styles */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+} 

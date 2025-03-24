@@ -1,0 +1,236 @@
+/* Match Rallies Popup CSS */
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('../assets/fonts/Fontspring-DEMO-proximanova-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Black';
+    src: url('../assets/fonts/Fontspring-DEMO-proximanova-black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaCond-Regular';
+    src: url('../assets/fonts/Fontspring-DEMO-proximanovacond-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaCond-Bold';
+    src: url('../assets/fonts/Fontspring-DEMO-proximanovacond-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    /* Colors extracted from the designs */
+    --match-rallies-header-bg: #2F74A4;
+    --match-rallies-title-bg: #000000;
+    --match-rallies-title-text: #FFFFFF;
+    --match-rallies-body-bg: #2F74A4;
+    --match-rallies-body-text: #FFFFFF;
+    --match-rallies-footer-bg: #2F74A4;
+    --match-rallies-footer-text: #FFFFFF;
+    --match-rallies-player1-color: #80C4E6;
+    --match-rallies-player2-color: #2F74A4;
+    --match-rallies-progress-bg: #19222D;
+    --match-rallies-border: #3582B2;
+}
+
+/* ====== Match Rallies Popup Styles ====== */
+.match-rallies-popup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'ProximaNovaCond-Regular', 'Arial', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border: 1px solid var(--match-rallies-border);
+}
+
+/* Header */
+.match-rallies-popup__header {
+    display: flex;
+    height: 80px;
+    background-color: var(--match-rallies-header-bg);
+    background-image: url('../assets/background/trajectory.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.match-rallies-popup__logo {
+    width: 80px;
+    height: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.match-rallies-popup__logo img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.match-rallies-popup__center-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+.match-rallies-popup__year {
+    font-size: 30px;
+    font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
+    margin-bottom: 5px;
+}
+
+.match-rallies-popup__tournament-name {
+    font-size: 22px;
+    font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
+    text-align: center;
+}
+
+/* Title Bar */
+.match-rallies-popup__title-bar {
+    display: flex;
+    height: 50px;
+    background-color: var(--match-rallies-title-bg);
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--match-rallies-border);
+    border-bottom: 1px solid var(--match-rallies-border);
+}
+
+.match-rallies-popup__title {
+    font-size: 32px;
+    font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
+    color: var(--match-rallies-title-text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Player Info */
+.match-rallies-popup__player-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: var(--match-rallies-body-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.match-rallies-popup__player {
+    display: flex;
+    align-items: center;
+}
+
+.match-rallies-popup__player--right {
+    flex-direction: row-reverse;
+}
+
+.match-rallies-popup__player-color {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+.match-rallies-popup__player-name {
+    font-family: 'ProximaNovaCond-Bold', 'Arial', sans-serif;
+    color: var(--match-rallies-body-text);
+    text-transform: uppercase;
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+.match-rallies-popup__player-flag {
+    width: 25px;
+    height: 15px;
+    margin: 0 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.match-rallies-popup__player-flag img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Rally Stats */
+.match-rallies-popup__stat-container {
+    padding: 15px;
+    background-color: var(--match-rallies-body-bg);
+}
+
+.match-rallies-popup__values-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.match-rallies-popup__value {
+    font-size: 24px;
+    font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
+    color: var(--match-rallies-body-text);
+    width: 40px;
+    text-align: center;
+}
+
+.match-rallies-popup__stat-label {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'ProximaNovaCond-Bold', 'Arial', sans-serif;
+    color: var(--match-rallies-body-text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.match-rallies-popup__progress-container {
+    height: 30px;
+    display: flex;
+    background-color: var(--match-rallies-progress-bg);
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.match-rallies-popup__progress {
+    height: 100%;
+}
+
+.match-rallies-popup__progress--player1 {
+    background-color: var(--match-rallies-player1-color);
+}
+
+.match-rallies-popup__progress--player2 {
+    background-color: var(--match-rallies-player2-color);
+}
+
+/* Footer */
+.match-rallies-popup__footer {
+    height: 40px;
+    background-color: var(--match-rallies-footer-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.match-rallies-popup__footer-text {
+    color: var(--match-rallies-footer-text);
+    font-size: 16px;
+    font-family: 'ProximaNovaCond-Regular', 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+} 

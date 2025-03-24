@@ -4,85 +4,97 @@ const sampleData = {
         title: 'SERVE SUCCESS',
         players: [
             {
-                name: 'GROTH JONATHAN',
+                name: 'SHAO JIENI',
                 percentage: 75,
-                isActive: true,
-                countryCode: 'dk', // Denmark
-                score: 0,
-                totalScore: 8
+                score: '3',
+                totalScore: '11',
+                country: 'pt',
+                isActive: true
             },
             {
-                name: 'JORGIC DARKO',
-                percentage: 75,
-                isActive: false,
-                countryCode: 'si', // Slovenia
-                score: 2,
-                totalScore: 8
+                name: 'YUAN JIA NAN',
+                percentage: 45,
+                score: '1',
+                totalScore: '7',
+                country: 'fr',
+                isActive: false
             }
-        ],
-        organizationLogo: 'src/assets/ettu_logo.png'
+        ]
     },
-    backhandShot: {
-        title: 'BACKHAND SHOT WINS',
+    returnSuccess: {
+        title: 'RETURN SUCCESS',
         players: [
             {
-                name: 'BAJOR NATALIA',
-                percentage: 83,
-                isActive: true,
-                countryCode: 'pl', // Poland
-                score: 1,
-                totalScore: 6
+                name: 'SHAO JIENI',
+                percentage: 65,
+                score: '3',
+                totalScore: '11',
+                country: 'pt',
+                isActive: false
             },
             {
-                name: 'WINTER',
-                percentage: null, // Not shown in the image
-                isActive: false,
-                countryCode: 'de', // Germany
-                score: 0,
-                totalScore: 6
+                name: 'YUAN JIA NAN',
+                percentage: 48,
+                score: '1',
+                totalScore: '7',
+                country: 'fr',
+                isActive: true
             }
-        ],
-        organizationLogo: 'src/assets/ettu_logo.png'
+        ]
+    },
+    pointsWon: {
+        title: 'POINTS WON',
+        players: [
+            {
+                name: 'SHAO JIENI',
+                percentage: 71,
+                score: '3',
+                totalScore: '11',
+                country: 'pt',
+                isActive: true
+            },
+            {
+                name: 'YUAN JIA NAN',
+                percentage: 29,
+                score: '1',
+                totalScore: '7',
+                country: 'fr',
+                isActive: false
+            }
+        ]
     },
     matchSummary: {
         year: '2025',
         tournamentName: 'CCB Europe Top 16 Cup',
-        leftLogo: 'src/assets/stupa_logo.png',
-        rightLogo: 'src/assets/ettu_logo.png',
-        title: 'GAME 2 SUMMARY',
+        title: 'GAME SUMMARY',
         player1: {
-            name: 'MOREGARD TRULS',
-            gameScore: '2'
+            name: 'SHAO JIENI',
+            gameScore: '3'
         },
         player2: {
-            name: 'FREITAS MARCOS',
-            gameScore: '0'
+            name: 'YUAN JIA NAN',
+            gameScore: '1'
         },
         stats: [
             {
-                label: 'TOTAL POINTS WON',
-                player1Value: '12',
-                player2Value: '10'
+                label: 'SERVE POINTS WON',
+                player1Value: '25',
+                player2Value: '13'
             },
             {
-                label: 'POINTS WON ON SERVE',
-                player1Value: '4',
-                player2Value: '4'
+                label: 'RETURN POINTS WON',
+                player1Value: '22',
+                player2Value: '15'
             },
             {
-                label: 'FOREHAND SHOT WINS',
-                player1Value: '18%',
-                player2Value: '45%'
+                label: 'WINNERS',
+                player1Value: '11',
+                player2Value: '7'
             },
             {
-                label: 'BACKHAND SHOT WINS',
-                player1Value: '45%',
-                player2Value: '9%'
-            },
-            {
-                label: 'BIGGEST LEAD',
+                label: 'ERRORS',
                 player1Value: '3',
-                player2Value: '1'
+                player2Value: '9'
             }
         ],
         footerText: 'STATS BY: STUPA SPORTS ANALYTICS'
@@ -90,9 +102,7 @@ const sampleData = {
     matchRallies: {
         year: '2025',
         tournamentName: 'CCB Europe Top 16 Cup',
-        leftLogo: 'src/assets/stupa_logo.png',
-        rightLogo: 'src/assets/ettu_logo.png',
-        title: 'MATCH RALLIES',
+        title: 'GAME RALLIES',
         player1: {
             name: 'SHAO JIENI',
             countryCode: 'pt', // Portugal

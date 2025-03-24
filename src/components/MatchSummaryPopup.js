@@ -62,17 +62,13 @@ class MatchSummaryPopup {
         const header = document.createElement('div');
         header.className = 'match-summary-popup__header';
         
-        // Left logo
+        // Left logo (Stupa)
         const leftLogo = document.createElement('div');
         leftLogo.className = 'match-summary-popup__logo match-summary-popup__logo--left';
-        if (this.data.leftLogo) {
-            const img = document.createElement('img');
-            img.src = this.data.leftLogo;
-            img.alt = 'Left Logo';
-            leftLogo.appendChild(img);
-        } else {
-            leftLogo.textContent = 'LOGO';
-        }
+        const leftImg = document.createElement('img');
+        leftImg.src = '../assets/logos/stupa-logo-dark.png';
+        leftImg.alt = 'Stupa Logo';
+        leftLogo.appendChild(leftImg);
         header.appendChild(leftLogo);
         
         // Center info
@@ -91,17 +87,13 @@ class MatchSummaryPopup {
         centerInfo.appendChild(tournamentName);
         header.appendChild(centerInfo);
         
-        // Right logo
+        // Right logo (ETTU)
         const rightLogo = document.createElement('div');
         rightLogo.className = 'match-summary-popup__logo match-summary-popup__logo--right';
-        if (this.data.rightLogo) {
-            const img = document.createElement('img');
-            img.src = this.data.rightLogo;
-            img.alt = 'Right Logo';
-            rightLogo.appendChild(img);
-        } else {
-            rightLogo.textContent = 'LOGO';
-        }
+        const rightImg = document.createElement('img');
+        rightImg.src = '../assets/logos/ettu-logo.png';
+        rightImg.alt = 'ETTU Logo';
+        rightLogo.appendChild(rightImg);
         header.appendChild(rightLogo);
         
         return header;

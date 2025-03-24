@@ -66,17 +66,13 @@ class MatchRalliesPopup {
         const header = document.createElement('div');
         header.className = 'match-rallies-popup__header';
         
-        // Left logo
+        // Left logo (Stupa)
         const leftLogo = document.createElement('div');
         leftLogo.className = 'match-rallies-popup__logo match-rallies-popup__logo--left';
-        if (this.data.leftLogo) {
-            const img = document.createElement('img');
-            img.src = this.data.leftLogo;
-            img.alt = 'Left Logo';
-            leftLogo.appendChild(img);
-        } else {
-            leftLogo.textContent = 'LOGO';
-        }
+        const leftImg = document.createElement('img');
+        leftImg.src = '../assets/logos/stupa-logo-dark.png';
+        leftImg.alt = 'Stupa Logo';
+        leftLogo.appendChild(leftImg);
         header.appendChild(leftLogo);
         
         // Center info
@@ -95,17 +91,13 @@ class MatchRalliesPopup {
         centerInfo.appendChild(tournamentName);
         header.appendChild(centerInfo);
         
-        // Right logo
+        // Right logo (ETTU)
         const rightLogo = document.createElement('div');
         rightLogo.className = 'match-rallies-popup__logo match-rallies-popup__logo--right';
-        if (this.data.rightLogo) {
-            const img = document.createElement('img');
-            img.src = this.data.rightLogo;
-            img.alt = 'Right Logo';
-            rightLogo.appendChild(img);
-        } else {
-            rightLogo.textContent = 'LOGO';
-        }
+        const rightImg = document.createElement('img');
+        rightImg.src = '../assets/logos/ettu-logo.png';
+        rightImg.alt = 'ETTU Logo';
+        rightLogo.appendChild(rightImg);
         header.appendChild(rightLogo);
         
         return header;
@@ -121,7 +113,7 @@ class MatchRalliesPopup {
         
         const title = document.createElement('div');
         title.className = 'match-rallies-popup__title';
-        title.textContent = this.data.title || 'MATCH RALLIES';
+        title.textContent = this.data.title || 'GAME RALLIES';
         titleBar.appendChild(title);
         
         return titleBar;
@@ -153,14 +145,10 @@ class MatchRalliesPopup {
             const player1Flag = document.createElement('div');
             player1Flag.className = 'match-rallies-popup__player-flag';
             
-            try {
-                const flagImg = document.createElement('img');
-                flagImg.src = `src/assets/flags/${this.data.player1.countryCode.toLowerCase()}.png`;
-                flagImg.alt = `${this.data.player1.countryCode} flag`;
-                player1Flag.appendChild(flagImg);
-            } catch (e) {
-                player1Flag.textContent = this.data.player1.countryCode.toUpperCase();
-            }
+            const flagImg = document.createElement('img');
+            flagImg.src = `../assets/flags/${this.data.player1.countryCode.toLowerCase()}.png`;
+            flagImg.alt = `${this.data.player1.countryCode} flag`;
+            player1Flag.appendChild(flagImg);
             
             player1Info.appendChild(player1Flag);
         }
@@ -175,14 +163,10 @@ class MatchRalliesPopup {
             const player2Flag = document.createElement('div');
             player2Flag.className = 'match-rallies-popup__player-flag';
             
-            try {
-                const flagImg = document.createElement('img');
-                flagImg.src = `src/assets/flags/${this.data.player2.countryCode.toLowerCase()}.png`;
-                flagImg.alt = `${this.data.player2.countryCode} flag`;
-                player2Flag.appendChild(flagImg);
-            } catch (e) {
-                player2Flag.textContent = this.data.player2.countryCode.toUpperCase();
-            }
+            const flagImg = document.createElement('img');
+            flagImg.src = `../assets/flags/${this.data.player2.countryCode.toLowerCase()}.png`;
+            flagImg.alt = `${this.data.player2.countryCode} flag`;
+            player2Flag.appendChild(flagImg);
             
             player2Info.appendChild(player2Flag);
         }
