@@ -24,6 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
         layout: 'expanded'
     });
     
+    // Create the match summary popup
+    const matchSummaryPopup = new MatchSummaryPopup('match-summary-popup', sampleData.matchSummary);
+    
+    // Create the match rallies popup
+    const matchRalliesPopup = new MatchRalliesPopup('match-rallies-popup', sampleData.matchRallies);
+    
     // Handle UI Controls
     const layoutSelect = document.getElementById('layout-select');
     const showTitleCheck = document.getElementById('show-title');
@@ -47,6 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Update popups with the loaded data
                     serveSuccessPopup.update(data.serveSuccess);
                     backhandShotPopup.update(data.backhandShot, { layout: 'expanded' });
+                    
+                    // Update new popups if data exists
+                    if (data.matchSummary) {
+                        matchSummaryPopup.update(data.matchSummary);
+                    }
+                    
+                    if (data.matchRallies) {
+                        matchRalliesPopup.update(data.matchRallies);
+                    }
+                    
                     console.log('Loaded stats data from JSON file');
                 }
             });
@@ -59,6 +75,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Update popups with the loaded data
                     serveSuccessPopup.update(data.serveSuccess);
                     backhandShotPopup.update(data.backhandShot, { layout: 'expanded' });
+                    
+                    // Update new popups if data exists
+                    if (data.matchSummary) {
+                        matchSummaryPopup.update(data.matchSummary);
+                    }
+                    
+                    if (data.matchRallies) {
+                        matchRalliesPopup.update(data.matchRallies);
+                    }
+                    
                     console.log('Loaded dynamic data from JSON file');
                 }
             });
@@ -111,6 +137,32 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         serveSuccessPopup.update(updatedData);
+        
+        // Update match summary and match rallies with random values
+        const updateMatchSummary = {
+            ...sampleData.matchSummary,
+            stats: sampleData.matchSummary.stats.map(stat => {
+                return {
+                    ...stat,
+                    player1Value: String(Math.floor(Math.random() * 50)),
+                    player2Value: String(Math.floor(Math.random() * 50))
+                };
+            })
+        };
+        
+        const updateMatchRallies = {
+            ...sampleData.matchRallies,
+            rallyStats: sampleData.matchRallies.rallyStats.map(stat => {
+                return {
+                    ...stat,
+                    player1Value: String(Math.floor(Math.random() * 50)),
+                    player2Value: String(Math.floor(Math.random() * 50))
+                };
+            })
+        };
+        
+        matchSummaryPopup.update(updateMatchSummary);
+        matchRalliesPopup.update(updateMatchRallies);
     });
     
     // Reset button
@@ -136,6 +188,10 @@ document.addEventListener('DOMContentLoaded', () => {
             showPlayerFlags: true,
             showTurnIndicator: true
         });
+        
+        // Reset new popups to original data
+        matchSummaryPopup.update(sampleData.matchSummary);
+        matchRalliesPopup.update(sampleData.matchRallies);
         
         // Reset UI controls
         layoutSelect.value = 'default';

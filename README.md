@@ -11,6 +11,11 @@ A flexible and scalable web component library for creating dynamic, data-driven 
   - Player information including flags, names, scores
   - Turn indicator to show active player
 
+- **Multiple Popup Types**
+  - **Stat Popup**: For displaying player-specific statistics with progress bars
+  - **Match Summary Popup**: For showing match score, player names, and comparative statistics
+  - **Match Rallies Popup**: For visualizing rally statistics with side-by-side progress bars
+
 - **Flexible Styling**
   - Exact color matching from design
   - CSS variables for easy customization
@@ -31,9 +36,13 @@ A flexible and scalable web component library for creating dynamic, data-driven 
 │   │   ├── flags/       # Country flags
 │   │   └── ettu_logo.svg
 │   ├── components/      # Reusable components
-│   │   └── StatPopup.js # The main popup component
+│   │   ├── StatPopup.js         # Basic stats popup component
+│   │   ├── MatchSummaryPopup.js # Match summary component
+│   │   └── MatchRalliesPopup.js # Match rallies component
 │   ├── data/            # Data structures
-│   │   └── sampleData.js
+│   │   ├── sampleData.js       # Sample data for all components
+│   │   ├── stats-data.json     # External JSON data example
+│   │   └── dynamic-data.json   # Dynamic JSON data example
 │   ├── styles/          # CSS styles
 │   │   ├── main.css     # General styles
 │   │   └── popups.css   # Popup-specific styles
@@ -49,6 +58,8 @@ A flexible and scalable web component library for creating dynamic, data-driven 
 <link rel="stylesheet" href="src/styles/main.css">
 <link rel="stylesheet" href="src/styles/popups.css">
 <script src="src/components/StatPopup.js"></script>
+<script src="src/components/MatchSummaryPopup.js"></script>
+<script src="src/components/MatchRalliesPopup.js"></script>
 ```
 
 2. Create a container element:
@@ -60,6 +71,7 @@ A flexible and scalable web component library for creating dynamic, data-driven 
 3. Prepare your data:
 
 ```javascript
+// For a basic stats popup
 const myData = {
     title: 'SERVE SUCCESS',
     players: [
@@ -75,18 +87,52 @@ const myData = {
     ],
     organizationLogo: 'path/to/logo.png'
 };
+
+// For a match summary popup
+const matchSummaryData = {
+    year: '2025',
+    tournamentName: 'Tournament Name',
+    leftLogo: 'path/to/logo1.png',
+    rightLogo: 'path/to/logo2.png',
+    title: 'MATCH SUMMARY',
+    player1: {
+        name: 'PLAYER ONE',
+        gameScore: '2'
+    },
+    player2: {
+        name: 'PLAYER TWO',
+        gameScore: '1'
+    },
+    stats: [
+        {
+            label: 'TOTAL POINTS WON',
+            player1Value: '12',
+            player2Value: '10'
+        },
+        // More stats...
+    ],
+    footerText: 'STATS BY: ORGANIZATION NAME'
+};
 ```
 
 4. Initialize the popup:
 
 ```javascript
+// Basic stat popup
 const myPopup = new StatPopup('my-popup', myData);
+
+// Match summary popup
+const matchSummary = new MatchSummaryPopup('match-summary-container', matchSummaryData);
+
+// Match rallies popup
+const matchRallies = new MatchRalliesPopup('match-rallies-container', matchRalliesData);
 ```
 
 5. To update with new data:
 
 ```javascript
 myPopup.update(newData);
+matchSummary.update(newMatchData);
 ```
 
 ## Customization
@@ -128,9 +174,22 @@ myPopup.update(myData, {
 });
 ```
 
+The MatchSummaryPopup and MatchRalliesPopup components also support configuration options:
+
+```javascript
+// Match Summary configuration
+const matchSummaryConfig = {
+    showHeader: true,  // Whether to show the tournament header
+    showFooter: true   // Whether to show the footer
+};
+
+// Initialize with configuration
+const matchSummary = new MatchSummaryPopup('match-summary-container', matchSummaryData, matchSummaryConfig);
+```
+
 ### Responsive Design
 
-The component is responsive by default and will adapt to different screen sizes. On small screens, the layout will adjust to maintain usability.
+The components are responsive by default and will adapt to different screen sizes. On small screens, the layout will adjust to maintain usability.
 
 ## Browser Support
 

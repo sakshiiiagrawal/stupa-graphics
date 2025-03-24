@@ -4,18 +4,18 @@
     "players": [
       {
         "name": "GROTH JONATHAN",
-        "percentage": 88,
+        "percentage": 62,
         "isActive": false,
         "countryCode": "dk",
-        "score": 3,
+        "score": 1,
         "totalScore": 8
       },
       {
         "name": "JORGIC DARKO",
-        "percentage": 92,
+        "percentage": 81,
         "isActive": true,
         "countryCode": "si",
-        "score": 5,
+        "score": 3,
         "totalScore": 8
       }
     ],
@@ -26,21 +26,99 @@
     "players": [
       {
         "name": "BAJOR NATALIA",
-        "percentage": 95,
-        "isActive": true,
+        "percentage": 76,
+        "isActive": false,
         "countryCode": "pl",
-        "score": 3,
-        "totalScore": 6
+        "score": 2,
+        "totalScore": 7
       },
       {
         "name": "WINTER",
-        "percentage": 70,
-        "isActive": false,
+        "percentage": 63,
+        "isActive": true,
         "countryCode": "de",
-        "score": 2,
-        "totalScore": 6
+        "score": 1,
+        "totalScore": 7
       }
     ],
     "organizationLogo": "src/assets/ettu_logo.png"
+  },
+  "matchSummary": {
+    "year": "2025",
+    "tournamentName": "CCB Europe Top 16 Cup",
+    "leftLogo": "src/assets/stupa_logo.png",
+    "rightLogo": "src/assets/ettu_logo.png",
+    "title": "GAME 4 SUMMARY",
+    "player1": {
+      "name": "MOREGARD TRULS",
+      "gameScore": "3"
+    },
+    "player2": {
+      "name": "FREITAS MARCOS",
+      "gameScore": "2"
+    },
+    "stats": [
+      {
+        "label": "TOTAL POINTS WON",
+        "player1Value": "11",
+        "player2Value": "9"
+      },
+      {
+        "label": "POINTS WON ON SERVE",
+        "player1Value": "6",
+        "player2Value": "5"
+      },
+      {
+        "label": "FOREHAND SHOT WINS",
+        "player1Value": "26%",
+        "player2Value": "35%"
+      },
+      {
+        "label": "BACKHAND SHOT WINS",
+        "player1Value": "37%",
+        "player2Value": "15%"
+      },
+      {
+        "label": "BIGGEST LEAD",
+        "player1Value": "2",
+        "player2Value": "2"
+      }
+    ],
+    "footerText": "STATS BY: STUPA SPORTS ANALYTICS"
+  },
+  "matchRallies": {
+    "year": "2025",
+    "tournamentName": "CCB Europe Top 16 Cup",
+    "leftLogo": "src/assets/stupa_logo.png",
+    "rightLogo": "src/assets/ettu_logo.png",
+    "title": "MATCH RALLIES",
+    "player1": {
+      "name": "SHAO JIENI",
+      "countryCode": "pt",
+      "color": "#80C4E6"
+    },
+    "player2": {
+      "name": "YUAN JIA NAN",
+      "countryCode": "fr",
+      "color": "#2F74A4"
+    },
+    "rallyStats": [
+      {
+        "label": "POINTS WON ON SHORT RALLIES (1-4 SHOTS)",
+        "player1Value": "31",
+        "player2Value": "29"
+      },
+      {
+        "label": "POINTS WON ON MEDIUM RALLIES (5-8 SHOTS)",
+        "player1Value": "8",
+        "player2Value": "12"
+      },
+      {
+        "label": "POINTS WON ON LONG RALLIES (8+ SHOTS)",
+        "player1Value": "5",
+        "player2Value": "3"
+      }
+    ],
+    "footerText": "STATS BY: STUPA SPORTS ANALYTICS"
   }
 } 

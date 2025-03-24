@@ -42,5 +42,83 @@
       }
     ],
     "organizationLogo": "src/assets/ettu_logo.png"
+  },
+  "matchSummary": {
+    "year": "2025",
+    "tournamentName": "CCB Europe Top 16 Cup",
+    "leftLogo": "src/assets/stupa_logo.png",
+    "rightLogo": "src/assets/ettu_logo.png",
+    "title": "GAME 3 SUMMARY",
+    "player1": {
+      "name": "MOREGARD TRULS",
+      "gameScore": "3"
+    },
+    "player2": {
+      "name": "FREITAS MARCOS",
+      "gameScore": "1"
+    },
+    "stats": [
+      {
+        "label": "TOTAL POINTS WON",
+        "player1Value": "14",
+        "player2Value": "11"
+      },
+      {
+        "label": "POINTS WON ON SERVE",
+        "player1Value": "5",
+        "player2Value": "3"
+      },
+      {
+        "label": "FOREHAND SHOT WINS",
+        "player1Value": "22%",
+        "player2Value": "38%"
+      },
+      {
+        "label": "BACKHAND SHOT WINS",
+        "player1Value": "40%",
+        "player2Value": "12%"
+      },
+      {
+        "label": "BIGGEST LEAD",
+        "player1Value": "4",
+        "player2Value": "1"
+      }
+    ],
+    "footerText": "STATS BY: STUPA SPORTS ANALYTICS"
+  },
+  "matchRallies": {
+    "year": "2025",
+    "tournamentName": "CCB Europe Top 16 Cup",
+    "leftLogo": "src/assets/stupa_logo.png",
+    "rightLogo": "src/assets/ettu_logo.png",
+    "title": "MATCH RALLIES",
+    "player1": {
+      "name": "SHAO JIENI",
+      "countryCode": "pt",
+      "color": "#80C4E6"
+    },
+    "player2": {
+      "name": "YUAN JIA NAN",
+      "countryCode": "fr",
+      "color": "#2F74A4"
+    },
+    "rallyStats": [
+      {
+        "label": "POINTS WON ON SHORT RALLIES (1-4 SHOTS)",
+        "player1Value": "28",
+        "player2Value": "32"
+      },
+      {
+        "label": "POINTS WON ON MEDIUM RALLIES (5-8 SHOTS)",
+        "player1Value": "12",
+        "player2Value": "7"
+      },
+      {
+        "label": "POINTS WON ON LONG RALLIES (8+ SHOTS)",
+        "player1Value": "3",
+        "player2Value": "2"
+      }
+    ],
+    "footerText": "STATS BY: STUPA SPORTS ANALYTICS"
   }
 } 
