@@ -4,6 +4,8 @@
 @import './statPopup.css';
 @import './matchSummaryPopup.css';
 @import './matchRalliesPopup.css';
+@import './scoreBoard.css';
+@import './percentStat.css';
 
 /* Font definitions */
 @font-face {

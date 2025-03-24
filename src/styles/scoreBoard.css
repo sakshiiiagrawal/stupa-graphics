@@ -1,0 +1,304 @@
+/* ScoreBoard Component Styles - Matched to the design in ScoreBoard.png */
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanova-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Black';
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanova-black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaCond-Regular';
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanovacond-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaCond-Bold';
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanovacond-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --scoreboard-bg: #1A1A1D;
+    --scoreboard-header-bg: #1A1A1D;
+    --scoreboard-title-bg: #3582B2;
+    --scoreboard-title-text: #FFFFFF;
+    --scoreboard-player-bg: #3582B2;
+    --scoreboard-player-text: #FFFFFF;
+    --scoreboard-score-bg: #252628;
+    --scoreboard-score-text: #FFFFFF;
+    --scoreboard-score-label: #FFFFFF;
+    --scoreboard-separator-text: #FFFFFF;
+    --scoreboard-footer-bg: #000000;
+    --scoreboard-footer-text: #FFFFFF;
+}
+
+/* Main container */
+.score-board {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--scoreboard-bg);
+    font-family: 'ProximaNovaCond-Bold', 'Arial', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border-radius: 0;
+}
+
+/* Header section with logos */
+.score-board__header {
+    display: flex;
+    align-items: center;
+    background-color: var(--scoreboard-header-bg);
+    padding: 10px 15px;
+    height: 60px;
+}
+
+.score-board__logo {
+    flex: 0 0 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-board__logo img {
+    max-height: 40px;
+    max-width: 80px;
+    object-fit: contain;
+}
+
+.score-board__logo--left {
+    justify-content: flex-start;
+}
+
+.score-board__logo--right {
+    justify-content: flex-end;
+}
+
+.score-board__title-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-board__title {
+    background-color: var(--scoreboard-title-bg);
+    color: var(--scoreboard-title-text);
+    padding: 8px 20px;
+    font-size: 16px;
+    font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* Player section */
+.score-board__player-section {
+    display: flex;
+    align-items: stretch;
+    height: 80px;
+}
+
+.score-board__player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--scoreboard-player-bg);
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.score-board__player-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.score-board__player--left .score-board__player-container {
+    justify-content: flex-start;
+}
+
+.score-board__player--right .score-board__player-container {
+    justify-content: flex-end;
+}
+
+.score-board__name-container {
+    display: flex;
+    align-items: center;
+}
+
+.score-board__name {
+    color: var(--scoreboard-player-text);
+    font-size: 20px;
+    font-family: 'ProximaNovaCond-Bold', 'Arial', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.score-board__flag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    height: 30px;
+    width: 45px;
+    overflow: hidden;
+}
+
+.score-board__flag img {
+    height: 24px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Score section */
+.score-board__score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--scoreboard-score-bg);
+    min-width: 120px;
+    padding: 10px;
+    z-index: 1;
+}
+
+.score-board__score-label {
+    color: var(--scoreboard-score-label);
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
+}
+
+.score-board__score-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-board__score {
+    color: var(--scoreboard-score-text);
+    font-size: 28px;
+    font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
+    text-align: center;
+    min-width: 30px;
+}
+
+.score-board__score-separator {
+    color: var(--scoreboard-separator-text);
+    font-size: 24px;
+    margin: 0 8px;
+}
+
+/* Footer section */
+.score-board__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--scoreboard-footer-bg);
+    padding: 8px 15px;
+    min-height: 30px;
+}
+
+.score-board__tournament-info {
+    color: var(--scoreboard-footer-text);
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: 'ProximaNovaCond-Regular', 'Arial', sans-serif;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .score-board {
+        max-width: 100%;
+    }
+    
+    .score-board__header {
+        padding: 8px;
+        height: 50px;
+    }
+    
+    .score-board__logo {
+        flex: 0 0 60px;
+        height: 30px;
+    }
+    
+    .score-board__logo img {
+        max-height: 30px;
+        max-width: 60px;
+    }
+    
+    .score-board__title {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .score-board__player-section {
+        height: 70px;
+    }
+    
+    .score-board__name {
+        font-size: 16px;
+    }
+    
+    .score-board__flag {
+        margin: 0 10px;
+        height: 24px;
+        width: 36px;
+    }
+    
+    .score-board__flag img {
+        height: 18px;
+    }
+    
+    .score-board__score-container {
+        min-width: 100px;
+        padding: 8px;
+    }
+    
+    .score-board__score-label {
+        font-size: 12px;
+    }
+    
+    .score-board__score {
+        font-size: 22px;
+    }
+    
+    .score-board__score-separator {
+        font-size: 18px;
+        margin: 0 5px;
+    }
+    
+    .score-board__footer {
+        padding: 6px 10px;
+        min-height: 24px;
+    }
+    
+    .score-board__tournament-info {
+        font-size: 12px;
+    }
+} 

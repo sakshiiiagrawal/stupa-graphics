@@ -1,0 +1,150 @@
+/* PercentStat Component Styles */
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanova-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Black';
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanova-black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaCond-Regular';
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanovacond-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNovaCond-Bold';
+    src: url('src/assets/fonts/Fontspring-DEMO-proximanovacond-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --percent-stat-bg: #17181A;
+    --percent-stat-title-bg: #3582B2;
+    --percent-stat-title-text: #FFFFFF;
+    --percent-stat-name-text: #FFFFFF;
+    --percent-stat-progress-bg: #252628;
+    --percent-stat-progress-bar: #3582B2;
+    --percent-stat-percentage-text: #3582B2;
+    --percent-stat-indicator-border: #3582B2;
+    --percent-stat-indicator-active: #3582B2;
+}
+
+.percent-stat {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--percent-stat-bg);
+    font-family: 'ProximaNovaCond-Bold', 'Arial', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.percent-stat__title {
+    background-color: var(--percent-stat-title-bg);
+    color: var(--percent-stat-title-text);
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.percent-stat__content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Player stat styles */
+.player-stat {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.player-stat__indicator {
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--percent-stat-indicator-border);
+    border-radius: 50%;
+}
+
+.player-stat__indicator.active {
+    background-color: var(--percent-stat-indicator-active);
+}
+
+.player-stat__name {
+    color: var(--percent-stat-name-text);
+    font-size: 16px;
+    min-width: 100px;
+    font-family: 'ProximaNovaCond-Bold', 'Arial', sans-serif;
+}
+
+.player-stat__progress-container {
+    flex-grow: 1;
+    height: 24px;
+    background-color: var(--percent-stat-progress-bg);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.player-stat__progress-bar {
+    height: 100%;
+    background-color: var(--percent-stat-progress-bar);
+    transition: width 0.5s ease;
+}
+
+.player-stat__percentage {
+    color: var(--percent-stat-percentage-text);
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 60px;
+    text-align: right;
+    font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .percent-stat {
+        max-width: 100%;
+    }
+    
+    .player-stat {
+        flex-wrap: wrap;
+    }
+    
+    .player-stat__name {
+        order: 1;
+        min-width: auto;
+        flex: 1;
+    }
+    
+    .player-stat__indicator {
+        order: 0;
+    }
+    
+    .player-stat__progress-container {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .player-stat__percentage {
+        order: 2;
+        min-width: auto;
+    }
+} 

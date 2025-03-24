@@ -1,4 +1,4 @@
-// Initialize popups when the DOM is loaded
+// Initialize components when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Function to fetch data from JSON file
     const loadDataFromJson = (url) => {
@@ -16,12 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     };
 
-    // Create the first popup (Serve Success) with default layout
-    const serveSuccessPopup = new StatPopup('serve-success-popup', sampleData.serveSuccess);
+    // Create the scoreboard component demo
+    const scoreboardDemo = new ScoreBoard('scoreboard-demo', {
+        leftPlayer: sampleData.serveSuccess.players[0],
+        rightPlayer: sampleData.serveSuccess.players[1],
+        leftScore: sampleData.serveSuccess.players[0].score,
+        rightScore: sampleData.serveSuccess.players[1].score,
+        tournamentName: sampleData.matchSummary.tournamentName,
+        eventInfo: `${sampleData.matchSummary.year} - Round of 16`
+    });
     
-    // Create the second popup (Return Success) with expanded layout
-    const returnSuccessPopup = new StatPopup('return-success-popup', sampleData.returnSuccess, {
-        layout: 'expanded'
+    // Create the percent stat component demo
+    const percentStatDemo = new PercentStat('percent-stat-demo', {
+        title: "FOREHAND WINNERS",
+        players: sampleData.serveSuccess.players
     });
     
     // Create the match summary popup
@@ -49,17 +57,28 @@ document.addEventListener('DOMContentLoaded', () => {
     updateConfigBtn.addEventListener('click', () => {
         const config = {
             showTitle: showTitleCheck.checked,
-            showPercentage: showPercentageCheck.checked,
-            showProgressBar: showProgressCheck.checked,
-            showLogo: showLogoCheck.checked,
-            showPlayerFlags: showFlagsCheck.checked,
-            showTurnIndicator: showIndicatorCheck.checked,
-            layout: layoutSelect.value
+            showIndicator: showIndicatorCheck.checked
         };
         
-        // Update both stat popups with the new config
-        serveSuccessPopup.update(sampleData.serveSuccess, config);
-        returnSuccessPopup.update(sampleData.returnSuccess, config);
+        // Update ScoreBoard with the relevant config
+        scoreboardDemo.update({
+            leftPlayer: sampleData.serveSuccess.players[0],
+            rightPlayer: sampleData.serveSuccess.players[1],
+            leftScore: sampleData.serveSuccess.players[0].score,
+            rightScore: sampleData.serveSuccess.players[1].score,
+            tournamentName: sampleData.matchSummary.tournamentName,
+            eventInfo: `${sampleData.matchSummary.year} - Round of 16`
+        }, {
+            showTitle: config.showTitle
+        });
+        
+        // Update PercentStat with the relevant config
+        percentStatDemo.update({
+            title: "FOREHAND WINNERS",
+            players: sampleData.serveSuccess.players
+        }, {
+            showIndicator: config.showIndicator
+        });
         
         // For match related popups, only update header and footer visibility
         matchSummaryPopup.update(sampleData.matchSummary, {
@@ -75,30 +94,28 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Update with random data
     updateDataBtn.addEventListener('click', () => {
-        // Update with random percentages
-        const randomServeSuccess = {
-            ...sampleData.serveSuccess,
-            players: sampleData.serveSuccess.players.map(player => {
-                return {
-                    ...player,
-                    percentage: Math.floor(Math.random() * 100)
-                };
-            })
-        };
+        // Generate random players with random percentages
+        const randomPlayers = sampleData.serveSuccess.players.map(player => {
+            return {
+                ...player,
+                percentage: Math.floor(Math.random() * 100)
+            };
+        });
         
-        const randomReturnSuccess = {
-            ...sampleData.returnSuccess,
-            players: sampleData.returnSuccess.players.map(player => {
-                return {
-                    ...player,
-                    percentage: Math.floor(Math.random() * 100)
-                };
-            })
-        };
+        // Update standalone component demos with random data
+        scoreboardDemo.update({
+            leftPlayer: randomPlayers[0],
+            rightPlayer: randomPlayers[1],
+            leftScore: String(Math.floor(Math.random() * 11)),
+            rightScore: String(Math.floor(Math.random() * 11)),
+            tournamentName: sampleData.matchSummary.tournamentName,
+            eventInfo: `${sampleData.matchSummary.year} - Round ${Math.floor(Math.random() * 8) + 1}`
+        });
         
-        // Update stats popups with random data
-        serveSuccessPopup.update(randomServeSuccess);
-        returnSuccessPopup.update(randomReturnSuccess);
+        percentStatDemo.update({
+            title: "FOREHAND WINNERS",
+            players: randomPlayers
+        });
         
         // Update match summary and match rallies with random values
         const updateMatchSummary = {
@@ -138,27 +155,27 @@ document.addEventListener('DOMContentLoaded', () => {
         showFlagsCheck.checked = true;
         showIndicatorCheck.checked = true;
         
-        // Reset popups to initial state
-        serveSuccessPopup.update(sampleData.serveSuccess, {
-            showTitle: true,
-            showPercentage: true,
-            showProgressBar: true,
-            showLogo: true,
-            showPlayerFlags: true,
-            showTurnIndicator: true,
-            layout: 'default'
+        // Reset ScoreBoard to initial state
+        scoreboardDemo.update({
+            leftPlayer: sampleData.serveSuccess.players[0],
+            rightPlayer: sampleData.serveSuccess.players[1],
+            leftScore: sampleData.serveSuccess.players[0].score,
+            rightScore: sampleData.serveSuccess.players[1].score,
+            tournamentName: sampleData.matchSummary.tournamentName,
+            eventInfo: `${sampleData.matchSummary.year} - Round of 16`
+        }, {
+            showTitle: true
         });
         
-        returnSuccessPopup.update(sampleData.returnSuccess, {
-            showTitle: true,
-            showPercentage: true,
-            showProgressBar: true,
-            showLogo: true,
-            showPlayerFlags: true,
-            showTurnIndicator: true,
-            layout: 'expanded'
+        // Reset PercentStat to initial state
+        percentStatDemo.update({
+            title: "FOREHAND WINNERS",
+            players: sampleData.serveSuccess.players
+        }, {
+            showIndicator: true
         });
         
+        // Reset match popups
         matchSummaryPopup.update(sampleData.matchSummary, {
             showHeader: true,
             showFooter: true
@@ -175,8 +192,14 @@ document.addEventListener('DOMContentLoaded', () => {
         loadDataFromJson('src/data/stats-data.json')
             .then(data => {
                 if (data) {
-                    serveSuccessPopup.update(data.serveSuccess || sampleData.serveSuccess);
-                    returnSuccessPopup.update(data.returnSuccess || sampleData.returnSuccess);
+                    // Use the data for our components if available
+                    if (data.scoreBoardData) {
+                        scoreboardDemo.update(data.scoreBoardData);
+                    }
+                    
+                    if (data.percentStatData) {
+                        percentStatDemo.update(data.percentStatData);
+                    }
                 }
             });
     });

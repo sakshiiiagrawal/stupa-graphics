@@ -1,0 +1,463 @@
+{
+    "_id": "292073",
+    "player_a": "Milan Namek Sali",
+    "player_b": "Jaxon Henriksson",
+    "tournament_name": "BWF Open",
+    "event_name": "Men's Singles KO",
+    "status": "completed",
+    "last_service_by": 35291,
+    "game_score": "4-21",
+    "point_number": 83,
+    "set_score_a": 1,
+    "set_score_b": 2,
+    "biggest_lead_a": 11,
+    "biggest_lead_b": 18,
+    "missed_errors_a": 3,
+    "missed_errors_b": 1,
+    "net_errors_a": 0,
+    "net_errors_b": 1,
+    "out_errors_a": 1,
+    "out_errors_b": 1,
+    "player_a_serve_attempts": 34,
+    "player_a_serve_success_count": 18,
+    "player_a_serve_success_percentage": 52.94,
+    "player_a_zones": {
+      "MCL": 1,
+      "BCR": 2,
+      "MCR": 1,
+      "BCL": 0,
+      "FC": 0
+    },
+    "player_b_serve_attempts": 49,
+    "player_b_serve_success_count": 35,
+    "player_b_serve_success_percentage": 71.43,
+    "player_b_zones": {
+      "BCL": 0,
+      "BCR": 0,
+      "MCL": 0,
+      "MCR": 0,
+      "FC": 0
+    },
+    "rally_analysis": {
+      "short": {
+        "count": 1,
+        "won_by_player_a": 0,
+        "won_by_player_b": 0
+      },
+      "medium": {
+        "count": 0,
+        "won_by_player_a": 0,
+        "won_by_player_b": 0
+      },
+      "long": {
+        "count": 0,
+        "won_by_player_a": 0,
+        "won_by_player_b": 0
+      }
+    },
+    "shot_hand_analysis": {
+      "Forehand": {
+        "count": 1,
+        "player_a_won": 0,
+        "player_b_won": 1
+      },
+      "Backhand": {
+        "count": 0,
+        "player_a_won": 0,
+        "player_b_won": 0
+      }
+    },
+    "shot_type_analysis": {
+      "Clear": {
+        "count": 2,
+        "player_a_won": 1,
+        "player_b_won": 1
+      },
+      "Smash": {
+        "count": 2,
+        "player_a_won": 0,
+        "player_b_won": 2
+      },
+      "Drop": {
+        "count": 0,
+        "player_a_won": 0,
+        "player_b_won": 0
+      }
+    },
+    "total_direct_serve_wins_a": 0,
+    "total_direct_serve_wins_b": 0,
+    "total_fault_serves_a": 0,
+    "total_fault_serves_b": 0,
+    "total_forced_errors_a": 2,
+    "total_forced_errors_b": 0,
+    "total_unforced_errors_a": 2,
+    "total_unforced_errors_b": 3,
+    "tracked_stats": {
+      "total_forced_errors_a": 2,
+      "total_forced_errors_b": 0,
+      "total_unforced_errors_a": 2,
+      "total_unforced_errors_b": 3,
+      "total_direct_serve_wins_a": 0,
+      "total_direct_serve_wins_b": 0,
+      "total_fault_serves_a": 0,
+      "total_fault_serves_b": 0,
+      "net_errors_a": 0,
+      "out_errors_a": 1,
+      "missed_errors_a": 3,
+      "net_errors_b": 1,
+      "out_errors_b": 1,
+      "missed_errors_b": 1,
+      "player_a_zones": {
+        "MCL": 1,
+        "BCR": 2,
+        "MCR": 1,
+        "BCL": 0,
+        "FC": 0
+      },
+      "player_b_zones": {
+        "BCL": 0,
+        "BCR": 0,
+        "MCL": 0,
+        "MCR": 0,
+        "FC": 0
+      },
+      "player_a_serve_attempts": 34,
+      "player_a_serve_success_count": 18,
+      "player_b_serve_attempts": 49,
+      "player_b_serve_success_count": 35,
+      "player_a_serve_success_percentage": 52.94,
+      "player_b_serve_success_percentage": 71.43,
+      "shot_hand_analysis": {
+        "Forehand": {
+          "count": 1,
+          "player_a_won": 0,
+          "player_b_won": 1
+        },
+        "Backhand": {
+          "count": 0,
+          "player_a_won": 0,
+          "player_b_won": 0
+        }
+      },
+      "shot_type_analysis": {
+        "Clear": {
+          "count": 2,
+          "player_a_won": 1,
+          "player_b_won": 1
+        },
+        "Smash": {
+          "count": 2,
+          "player_a_won": 0,
+          "player_b_won": 2
+        },
+        "Drop": {
+          "count": 0,
+          "player_a_won": 0,
+          "player_b_won": 0
+        }
+      },
+      "rally_analysis": {
+        "short": {
+          "count": 1,
+          "won_by_player_a": 0,
+          "won_by_player_b": 0
+        },
+        "medium": {
+          "count": 0,
+          "won_by_player_a": 0,
+          "won_by_player_b": 0
+        },
+        "long": {
+          "count": 0,
+          "won_by_player_a": 0,
+          "won_by_player_b": 0
+        }
+      },
+      "biggest_lead_a": 11,
+      "biggest_lead_b": 18
+    },
+    "game_data": [
+      {
+        "game_number": 1,
+        "player_a": "Milan Namek Sali",
+        "player_b": "Jaxon Henriksson",
+        "tournament_name": "BWF Open",
+        "event_name": "Men's Singles KO",
+        "status": "ongoing",
+        "game_score": "0-0",
+        "point_number": 29,
+        "set_score_a": 1,
+        "set_score_b": 2,
+        "missed_errors_a": 0,
+        "missed_errors_b": 0,
+        "net_errors_a": 0,
+        "net_errors_b": 0,
+        "out_errors_a": 1,
+        "out_errors_b": 0,
+        "total_direct_serve_wins_a": 0,
+        "total_direct_serve_wins_b": 0,
+        "total_fault_serves_a": 0,
+        "total_fault_serves_b": 0,
+        "total_forced_errors_a": 0,
+        "total_forced_errors_b": 0,
+        "total_unforced_errors_a": 1,
+        "total_unforced_errors_b": 0,
+        "player_a_serve_attempts": 21,
+        "player_a_serve_success_count": 15,
+        "player_a_serve_success_percentage": 71.43,
+        "player_b_serve_attempts": 8,
+        "player_b_serve_success_count": 3,
+        "player_b_serve_success_percentage": 37.5,
+        "shot_hand_analysis": {
+          "Forehand": {
+            "count": 1,
+            "player_a_won": 0,
+            "player_b_won": 0
+          },
+          "Backhand": {
+            "count": 0,
+            "player_a_won": 0,
+            "player_b_won": 0
+          }
+        },
+        "shot_type_analysis": {
+          "Clear": {
+            "count": 0,
+            "player_a_won": 0,
+            "player_b_won": 0
+          },
+          "Smash": {
+            "count": 0,
+            "player_a_won": 0,
+            "player_b_won": 0
+          },
+          "Drop": {
+            "count": 0,
+            "player_a_won": 0,
+            "player_b_won": 0
+          }
+        },
+        "rally_analysis": {
+          "short": {
+            "count": 0,
+            "won_by_player_a": 0,
+            "won_by_player_b": 0
+          },
+          "medium": {
+            "count": 0,
+            "won_by_player_a": 0,
+            "won_by_player_b": 0
+          },
+          "long": {
+            "count": 0,
+            "won_by_player_a": 0,
+            "won_by_player_b": 0
+          }
+        },
+        "player_a_zones": {
+          "BCL": 0,
+          "BCR": 0,
+          "MCL": 0,
+          "MCR": 0,
+          "FC": 0
+        },
+        "player_b_zones": {
+          "BCL": 0,
+          "BCR": 0,
+          "MCL": 0,
+          "MCR": 0,
+          "FC": 0
+        },
+        "biggest_lead_a": 11,
+        "biggest_lead_b": 3
+      },
+      {
+        "game_number": 2,
+        "player_a": "Milan Namek Sali",
+        "player_b": "Jaxon Henriksson",
+        "tournament_name": "BWF Open",
+        "event_name": "Men's Singles KO",
+        "status": "ongoing",
+        "game_score": "0-0",
+        "point_number": 27,
+        "set_score_a": 1,
+        "set_score_b": 2,
+        "missed_errors_a": 3,
+        "missed_errors_b": 1,
+        "net_errors_a": 0,
+        "net_errors_b": 1,
+        "out_errors_a": 0,
+        "out_errors_b": 1,
+        "total_direct_serve_wins_a": 0,
+        "total_direct_serve_wins_b": 0,
+        "total_fault_serves_a": 0,
+        "total_fault_serves_b": 0,
+        "total_forced_errors_a": 2,
+        "total_forced_errors_b": 0,
+        "total_unforced_errors_a": 1,
+        "total_unforced_errors_b": 3,
+        "player_a_serve_attempts": 7,
+        "player_a_serve_success_count": 1,
+        "player_a_serve_success_percentage": 14.29,
+        "player_b_serve_attempts": 20,
+        "player_b_serve_success_count": 15,
+        "player_b_serve_success_percentage": 75,
+        "shot_hand_analysis": {
+          "Forehand": {
+            "count": 0,
+            "player_a_won": 0,
+            "player_b_won": 0
+          },
+          "Backhand": {
+            "count": 0,
+            "player_a_won": 0,
+            "player_b_won": 0
+          }
+        },
+        "shot_type_analysis": {
+          "Clear": {
+            "count": 2,
+            "player_a_won": 0,
+            "player_b_won": 0
+          },
+          "Smash": {
+            "count": 2,
+            "player_a_won": 0,
+            "player_b_won": 0
+          },
+          "Drop": {
+            "count": 0,
+            "player_a_won": 0,
+            "player_b_won": 0
+          }
+        },
+        "rally_analysis": {
+          "short": {
+            "count": 0,
+            "won_by_player_a": 0,
+            "won_by_player_b": 0
+          },
+          "medium": {
+            "count": 0,
+            "won_by_player_a": 0,
+            "won_by_player_b": 0
+          },
+          "long": {
+            "count": 0,
+            "won_by_player_a": 0,
+            "won_by_player_b": 0
+          }
+        },
+        "player_a_zones": {
+          "BCL": 0,
+          "BCR": 2,
+          "MCL": 1,
+          "MCR": 1,
+          "FC": 0
+        },
+        "player_b_zones": {
+          "BCL": 0,
+          "BCR": 0,
+          "MCL": 0,
+          "MCR": 0,
+          "FC": 0
+        },
+        "biggest_lead_a": 2,
+        "biggest_lead_b": 14
+      },
+      {
+        "game_number": 3,
+        "player_a": "Milan Namek Sali",
+        "player_b": "Jaxon Henriksson",
+        "tournament_name": "BWF Open",
+        "event_name": "Men's Singles KO",
+        "status": "ongoing",
+        "game_score": "0-0",
+        "point_number": 27,
+        "set_score_a": 1,
+        "set_score_b": 2,
+        "missed_errors_a": 0,
+        "missed_errors_b": 0,
+        "net_errors_a": 0,
+        "net_errors_b": 0,
+        "out_errors_a": 0,
+        "out_errors_b": 0,
+        "total_direct_serve_wins_a": 0,
+        "total_direct_serve_wins_b": 0,
+        "total_fault_serves_a": 0,
+        "total_fault_serves_b": 0,
+        "total_forced_errors_a": 0,
+        "total_forced_errors_b": 0,
+        "total_unforced_errors_a": 0,
+        "total_unforced_errors_b": 0,
+        "player_a_serve_attempts": 6,
+        "player_a_serve_success_count": 2,
+        "player_a_serve_success_percentage": 33.33,
+        "player_b_serve_attempts": 21,
+        "player_b_serve_success_count": 17,
+        "player_b_serve_success_percentage": 80.95,
+        "shot_hand_analysis": {
+          "Forehand": {
+            "count": 0,
+            "player_a_won": 0,
+            "player_b_won": 0
+          },
+          "Backhand": {
+            "count": 0,
+            "player_a_won": 0,
+            "player_b_won": 0
+          }
+        },
+        "shot_type_analysis": {
+          "Clear": {
+            "count": 0,
+            "player_a_won": 0,
+            "player_b_won": 0
+          },
+          "Smash": {
+            "count": 0,
+            "player_a_won": 0,
+            "player_b_won": 0
+          },
+          "Drop": {
+            "count": 0,
+            "player_a_won": 0,
+            "player_b_won": 0
+          }
+        },
+        "rally_analysis": {
+          "short": {
+            "count": 0,
+            "won_by_player_a": 0,
+            "won_by_player_b": 0
+          },
+          "medium": {
+            "count": 0,
+            "won_by_player_a": 0,
+            "won_by_player_b": 0
+          },
+          "long": {
+            "count": 0,
+            "won_by_player_a": 0,
+            "won_by_player_b": 0
+          }
+        },
+        "player_a_zones": {
+          "BCL": 0,
+          "BCR": 0,
+          "MCL": 0,
+          "MCR": 0,
+          "FC": 0
+        },
+        "player_b_zones": {
+          "BCL": 0,
+          "BCR": 0,
+          "MCL": 0,
+          "MCR": 0,
+          "FC": 0
+        },
+        "biggest_lead_a": 2,
+        "biggest_lead_b": 10
+      }
+    ]
+  }
