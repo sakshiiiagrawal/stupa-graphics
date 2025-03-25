@@ -29,15 +29,15 @@
 
 :root {
     /* Colors extracted from the designs */
-    --match-rallies-header-bg: #2F74A4;
+    --match-rallies-header-bg: #077796;
     --match-rallies-title-bg: #000000;
     --match-rallies-title-text: #FFFFFF;
-    --match-rallies-body-bg: #2F74A4;
+    --match-rallies-body-bg: #077796;
     --match-rallies-body-text: #FFFFFF;
-    --match-rallies-footer-bg: #2F74A4;
+    --match-rallies-footer-bg: #077796;
     --match-rallies-footer-text: #FFFFFF;
     --match-rallies-player1-color: #80C4E6;
-    --match-rallies-player2-color: #2F74A4;
+    --match-rallies-player2-color: #077796;
     --match-rallies-progress-bg: #19222D;
     --match-rallies-border: #3582B2;
 }
