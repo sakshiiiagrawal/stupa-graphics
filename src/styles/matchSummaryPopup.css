@@ -49,18 +49,19 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     font-family: 'ProximaNovaCond-Regular', 'Arial', sans-serif;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    border: 1px solid var(--match-summary-border);
+    border: 2px solid var(--match-summary-border);
+    border-radius: 0;
 }
 
 /* Header */
 .match-summary-popup__header {
     display: flex;
-    height: 80px;
+    height: 90px;
     background-color: var(--match-summary-header-bg);
     background-size: cover;
     background-position: center;
@@ -68,12 +69,14 @@
 }
 
 .match-summary-popup__logo {
-    width: 80px;
+    width: 120px;
     height: 100%;
     background-color: #f4fff4;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .match-summary-popup__logo img {
@@ -94,21 +97,23 @@
 }
 
 .match-summary-popup__year {
-    font-size: 30px;
+    font-size: 36px;
     font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .match-summary-popup__tournament-name {
-    font-size: 22px;
+    font-size: 26px;
     font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
     text-align: center;
+    line-height: 1.2;
+    text-transform: uppercase;
 }
 
 /* Title Bar */
 .match-summary-popup__title-bar {
     display: flex;
-    height: 50px;
+    height: 60px;
     background-color: var(--match-summary-stat-label-bg);
     border-top: 1px solid var(--match-summary-border);
     border-bottom: 1px solid var(--match-summary-border);
@@ -119,94 +124,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
+    font-size: 36px;
     font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
     color: var(--match-summary-title-text);
     text-transform: uppercase;
 }
 
 .match-summary-popup__score {
-    width: 60px;
-    height: 50px;
+    width: 80px;
+    height: 60px;
     background-color: var(--match-summary-score-bg);
     color: var(--match-summary-score-text);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
-    font-size: 30px;
+    font-size: 36px;
 }
 
 /* Names Bar */
-.match-summary-popup__names-bar {
-    display: flex;
-    height: 50px;
-    background-color: var(--match-summary-names-bg);
-    border-bottom: 1px solid #FFF;
-}
-
-.match-summary-popup__player-name {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    padding: 0 15px;
-    font-size: 24px;
-    font-family: 'ProximaNovaCond-Bold', 'Arial', sans-serif;
-    color: var(--match-summary-names-text);
-    text-transform: uppercase;
-}
-
-.match-summary-popup__player-name:first-child {
-    justify-content: flex-start;
-    border-right: 1px solid #FFF;
-}
-
-.match-summary-popup__player-name:last-child {
-    justify-content: flex-end;
-}
-
-/* Stats Container */
-.match-summary-popup__stats-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.match-summary-popup__stat-row {
-    display: flex;
-    height: 50px;
-    background-color: var(--match-summary-stat-bg);
-    border-bottom: 3px solid var(--match-summary-border);
-}
-
-.match-summary-popup__stat-value {
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
-    color: var(--match-summary-stat-text);
-}
-
-.match-summary-popup__stat-label {
-    flex: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-family: 'ProximaNovaCond-Bold', 'Arial', sans-serif;
-    color: var(--match-summary-title-text);
-    background-color: var(--match-summary-stat-label-bg);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    /* border-left: 3px solid var(--match-summary-border);
-    border-right: 3px solid var(--match-summary-border); */
-}
-
 .match-summary-popup__names-container {
     width: 100%;
     background-color: #057391;
-    padding: 10px;
+    padding: 8px;
     box-sizing: border-box;
 }
 
@@ -214,15 +154,21 @@
     background-color: #f4fff4;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
     width: 100%;
+    height: 52px;
     box-sizing: border-box;
 }
 
 .match-summary-popup__player-name-left,
 .match-summary-popup__player-name-right {
     color: #137689;
+    font-family: 'ProximaNovaCond-Bold', 'Arial', sans-serif;
+    font-size: 28px;
     font-weight: bold;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
 }
 
 .match-summary-popup__player-name-left {
@@ -233,9 +179,51 @@
     text-align: right;
 }
 
+/* Stats Container */
+.match-summary-popup__stats-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.match-summary-popup__stat-row {
+    display: flex;
+    height: 60px;
+    background-color: var(--match-summary-stat-bg);
+    border-bottom: 1px solid var(--match-summary-border);
+}
+
+.match-summary-popup__stat-row:last-child {
+    border-bottom: none;
+}
+
+.match-summary-popup__stat-value {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-family: 'ProximaNova-Bold', 'Arial', sans-serif;
+    color: var(--match-summary-stat-text);
+}
+
+.match-summary-popup__stat-label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-family: 'ProximaNovaCond-Bold', 'Arial', sans-serif;
+    color: var(--match-summary-title-text);
+    background-color: var(--match-summary-stat-label-bg);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+    text-align: center;
+}
+
 /* Footer */
 .match-summary-popup__footer {
-    height: 40px;
+    height: 50px;
     background-color: var(--match-summary-footer-bg);
     display: flex;
     align-items: center;
@@ -244,41 +232,46 @@
 
 .match-summary-popup__footer-text {
     color: var(--match-summary-footer-text);
-    font-size: 16px;
+    font-size: 22px;
     font-family: 'ProximaNovaCond-Regular', 'Arial', sans-serif;
     letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 /* Responsive */
-@media (max-width: 480px) {
+@media (max-width: 800px) {
     .match-summary-popup__year {
-        font-size: 24px;
+        font-size: 30px;
     }
     
     .match-summary-popup__tournament-name {
-        font-size: 16px;
+        font-size: 22px;
     }
     
     .match-summary-popup__title {
-        font-size: 24px;
+        font-size: 30px;
     }
     
     .match-summary-popup__score {
-        width: 50px;
-        font-size: 24px;
+        width: 60px;
+        font-size: 30px;
     }
     
-    .match-summary-popup__player-name {
-        font-size: 18px;
-        padding: 0 10px;
+    .match-summary-popup__player-name-left,
+    .match-summary-popup__player-name-right {
+        font-size: 22px;
     }
     
     .match-summary-popup__stat-value {
-        width: 70px;
-        font-size: 20px;
+        width: 90px;
+        font-size: 26px;
     }
     
     .match-summary-popup__stat-label {
-        font-size: 14px;
+        font-size: 22px;
+    }
+    
+    .match-summary-popup__footer-text {
+        font-size: 18px;
     }
 } 

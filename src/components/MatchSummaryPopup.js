@@ -133,13 +133,13 @@ class MatchSummaryPopup {
      * @returns {HTMLElement} The player names element
      */
     createPlayerNames() {
-        // Create outer div with background color #057391
-        const outerDiv = document.createElement('div');
-        outerDiv.className = 'match-summary-popup__names-container';
+        // Create outer container with blue background
+        const namesContainer = document.createElement('div');
+        namesContainer.className = 'match-summary-popup__names-container';
         
-        // Create inner div with background color #f4fff4
-        const innerDiv = document.createElement('div');
-        innerDiv.className = 'match-summary-popup__names-inner';
+        // Create inner container with white background
+        const namesInner = document.createElement('div');
+        namesInner.className = 'match-summary-popup__names-inner';
         
         // Player 1 name (left side)
         const player1 = document.createElement('div');
@@ -151,14 +151,14 @@ class MatchSummaryPopup {
         player2.className = 'match-summary-popup__player-name-right';
         player2.textContent = this.data.player2.name || 'Player 2';
         
-        // Add both player names to the inner div
-        innerDiv.appendChild(player1);
-        innerDiv.appendChild(player2);
+        // Add both player names to the inner container
+        namesInner.appendChild(player1);
+        namesInner.appendChild(player2);
         
-        // Add inner div to outer div
-        outerDiv.appendChild(innerDiv);
+        // Add inner container to outer container
+        namesContainer.appendChild(namesInner);
         
-        return outerDiv;
+        return namesContainer;
     }
     
     /**
